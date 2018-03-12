@@ -1,0 +1,7 @@
+{
+    "jscodehints.detectedExclusions": [
+        "C:/Users/user/Desktop/Probabando/flotillasAppv2/platforms/android/assets/www/lib/ionicuirouter/ionicUIRouter.js",
+        "C:/Users/user/Desktop/Probabando/flotillasAppv2/platforms/android/build/intermediates/assets/debug/www/plugins/ionic-plugin-keyboard/www/android/keyboard.js",
+        "C:/Users/user/Desktop/Probabando/flotillasAppv2/platforms/android/build/intermediates/assets/debug/www/cordova.js"
+    ]
+}
