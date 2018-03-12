@@ -1,0 +1,250 @@
+<ion-view title="Cargar Documentos" hide-nav-bar="true" id="page2" ng-init="init()">
+    <ion-content padding="true" class="manual-ios-statusbar-padding">
+        <div class="spacer" style="width: 300px; height: 10px;"></div>
+        <h3 id="cargarDocumentos-heading3" style="color:#392972;text-align:center;">Cargar Documentos</h3>
+        <div class="list card" id="cargarDocumentos-card22">
+            <ion-item class="item-avatar" id="cargarDocumentos-list-item31">
+                <img src="img/Chw9UwlCRAiQENgGvcZn_CrearOC.png">
+                <h2>Serie</h2>
+                <p>{{encabezado.vin}}</p>
+            </ion-item>
+            <div class="item item-body" id="cargarDocumentos-list-item-container2">
+                <div id="cargarDocumentos-markdown1" style="margin-top:0px;color:#000000;">
+                    <p>Tipo: {{encabezado.tipo}}</p>
+                </div>
+                <div id="cargarDocumentos-markdown2" style="margin-top:0px;color:#000000;">
+                    <p>Marca/Modelo: {{encabezado.marca}} {{encabezado.modelo}}</p>
+                </div>
+                <div id="cargarDocumentos-markdown4" style="margin-top:0px;color:#000000;">
+                    <p>Motor: {{encabezado.numeroMotor}}</p>
+                </div>
+                <div id="cargarDocumentos-markdown5" style="margin-top:0px;color:#000000;">
+                    <p>Color: {{encabezado.color}}</p>
+                </div>
+                <div id="cargarDocumentos-markdown6" style="margin-top:0px;color:#000000;">
+                    <p>Ultima Modificación: {{encabezado.ultimaModificacion}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="spacer" style="width: 300px; height: 10px;"></div>
+        <ion-list id="cargarDocumentos-list11">
+            <ion-item class="item-icon-left item-icon-right item-divider dark" id="cargarDocumentos-list-item33" ng-click="getListaDocumentos(14)">
+                <i class="icon ion-android-document"></i>Factura
+                <i class="icon ion-ios-arrow-down icon-accessory"></i>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right dark" ng-repeat="documentos in listaDocumentos" ng-show="documentos.idDocumento==14" ng-click="mostrarDocumento(documentos.idDocumento,documentos.valor,documentos.vin,documentos.consecutivo)">
+                {{documentos.valor}}
+            </ion-item>
+            <ion-item ng-show="mostrarBoton==14">
+                <button style="font-weight:300;" class="button button-positive " ng-click="modal.show()">
+                    <i class="icon ion-android-upload"></i>
+                </button>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right item-divider dark" id="cargarDocumentos-list-item28" ng-click="getListaDocumentos(23)">
+                <i class="icon ion-android-document"></i>Póliza de Seguros
+                <i class="icon ion-ios-arrow-down icon-accessory"></i>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right dark" ng-repeat="documentos in listaDocumentos" ng-show="documentos.idDocumento==23" ng-click="mostrarDocumento(documentos.idDocumento,documentos.valor,documentos.vin,documentos.consecutivo)">
+                {{documentos.valor}}
+            </ion-item>
+            <ion-item ng-show="mostrarBoton==23">
+                <button style="font-weight:300;" class="button button-positive " ng-click="modal.show()">
+                    <i class="icon ion-android-upload"></i>
+                </button>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right item-divider dark" id="cargarDocumentos-list-item33" ng-click="getListaDocumentos(13)">
+                <i class="icon ion-android-document"></i>Placas
+                <i class="icon ion-ios-arrow-down icon-accessory"></i>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right dark" ng-repeat="documentos in listaDocumentos" ng-show="documentos.idDocumento==13" ng-click="mostrarDocumento(documentos.idDocumento,documentos.valor,documentos.vin,documentos.consecutivo)">
+                {{documentos.valor}}
+            </ion-item>
+            <ion-item ng-show="mostrarBoton==13">
+                <button style="font-weight:300;" class="button button-positive " ng-click="modal.show()">
+                    <i class="icon ion-android-upload"></i>
+                </button>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right item-divider dark" id="cargarDocumentos-list-item34" ng-click="getListaDocumentos(19)">
+                <i class="icon ion-android-document"></i>Tarjeta de circulación
+                <i class="icon ion-ios-arrow-down icon-accessory"></i>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right dark" ng-repeat="documentos in listaDocumentos" ng-show="documentos.idDocumento==19" ng-click="mostrarDocumento(documentos.idDocumento,documentos.valor,documentos.vin,documentos.consecutivo)">
+                {{documentos.valor}}
+            </ion-item>
+            <ion-item ng-show="mostrarBoton==19">
+                <button style="font-weight:300;" class="button button-positive " ng-click="modal.show()">
+                    <i class="icon ion-android-upload"></i>
+                </button>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right item-divider dark" id="cargarDocumentos-list-item35" ng-click="getListaDocumentos(31)">
+                <i class="icon ion-android-document"></i>Tenencia
+                <i class="icon ion-ios-arrow-down icon-accessory"></i>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right dark" ng-repeat="documentos in listaDocumentos" ng-show="documentos.idDocumento==31" ng-click="mostrarDocumento(documentos.idDocumento,documentos.valor,documentos.vin,documentos.consecutivo)">
+                {{documentos.valor}}
+            </ion-item>
+            <ion-item ng-show="mostrarBoton==31">
+                <button style="font-weight:300;" class="button button-positive " ng-click="modal.show()">
+                    <i class="icon ion-android-upload"></i>
+                </button>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right item-divider dark" id="cargarDocumentos-list-item36" ng-click="getListaDocumentos(47)">
+                <i class="icon ion-android-document"></i>Actas de Entrega
+                <i class="icon ion-ios-arrow-down icon-accessory"></i>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right dark" ng-repeat="documentos in listaDocumentos" ng-show="documentos.idDocumento==47" ng-click="mostrarDocumento(documentos.idDocumento,documentos.valor,documentos.vin,documentos.consecutivo)">
+                {{documentos.valor}}
+            </ion-item>
+            <ion-item ng-show="mostrarBoton==47">
+                <button style="font-weight:300;" class="button button-positive " ng-click="modal.show()">
+                    <i class="icon ion-android-upload"></i>
+                </button>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right item-divider dark" id="cargarDocumentos-list-item37" ng-click="getListaDocumentos(24)">
+                <i class="icon ion-android-document"></i>Permiso Especial
+                <i class="icon ion-ios-arrow-down icon-accessory"></i>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right dark" ng-repeat="documentos in listaDocumentos" ng-show="documentos.idDocumento==24" ng-click="mostrarDocumento(documentos.idDocumento,documentos.valor,documentos.vin,documentos.consecutivo)">
+                {{documentos.valor}}
+            </ion-item>
+            <ion-item ng-show="mostrarBoton==24">
+                <button style="font-weight:300;" class="button button-positive " ng-click="modal.show()">
+                    <i class="icon ion-android-upload"></i>
+                </button>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right item-divider dark" id="cargarDocumentos-list-item49" ng-click="getListaDocumentos(16)">
+                <i class="icon ion-android-document"></i>Equipamiento vehicular
+                <i class="icon ion-ios-arrow-down icon-accessory"></i>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right dark" ng-repeat="documentos in listaDocumentos" ng-show="documentos.idDocumento==16" ng-click="mostrarDocumento(documentos.idDocumento,documentos.valor,documentos.vin,documentos.consecutivo)">
+                {{documentos.valor}}
+            </ion-item>
+            <ion-item ng-show="mostrarBoton==16">
+                <button style="font-weight:300;" class="button button-positive " ng-click="modal.show()">
+                    <i class="icon ion-android-upload"></i>
+                </button>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right item-divider dark" id="cargarDocumentos-list-item50" ng-click="getListaDocumentos(22)">
+                <i class="icon ion-android-document"></i>Pago Verificación
+                <i class="icon ion-ios-arrow-down icon-accessory"></i>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right dark" ng-repeat="documentos in listaDocumentos" ng-show="documentos.idDocumento==22" ng-click="mostrarDocumento(documentos.idDocumento,documentos.valor,documentos.vin,documentos.consecutivo)">
+                {{documentos.valor}}
+            </ion-item>
+            <ion-item ng-show="mostrarBoton==22">
+                <button style="font-weight:300;" class="button button-positive " ng-click="modal.show()">
+                    <i class="icon ion-android-upload"></i>
+                </button>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right item-divider dark" id="cargarDocumentos-list-item51" ng-click="getListaDocumentos(36)">
+                <i class="icon ion-android-document"></i>Verificación
+                <i class="icon ion-ios-arrow-down icon-accessory"></i>
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-right dark" ng-repeat="documentos in listaDocumentos" ng-show="documentos.idDocumento==36" ng-click="mostrarDocumento(documentos.idDocumento,documentos.valor,documentos.vin,documentos.consecutivo)">
+                {{documentos.valor}}
+            </ion-item>
+            <ion-item ng-show="mostrarBoton==36">
+                <button style="font-weight:300;" class="button button-positive " ng-click="modal.show()">
+                    <i class="icon ion-android-upload"></i>
+                </button>
+            </ion-item>
+        </ion-list>
+        <div class="list card" id="page-card23">
+            <ion-item class="item-avatar" id="page-list-item58">
+                <img src="img/XOdL8zjRGmmcVR6xgUNR_programacion.png">
+                <h2>Fotos Antes</h2>
+            </ion-item>
+            <ion-list id="cargarDocumentos-list11">
+                <ion-item class="item-icon-left item-icon-right item-divider dark" id="cargarDocumentos-list-item28" ng-click="getListaDocumentos(27)">
+                    <i class="icon ion-android-document"></i>Frente
+                    <i class="icon ion-ios-arrow-down icon-accessory"></i>
+                </ion-item>
+                <ion-item class="item-icon-left item-icon-right dark" ng-repeat="documentos in listaDocumentos" ng-show="documentos.idDocumento==27" ng-click="mostrarDocumento(documentos.idDocumento,documentos.valor,documentos.vin,documentos.consecutivo)">
+                    {{documentos.valor}}
+                </ion-item>
+                <ion-item ng-show="mostrarBoton==27">
+                    <button style="font-weight:300;" class="button button-positive " ng-click="modal.show()">
+                        <i class="icon ion-android-upload"></i>
+                    </button>
+                </ion-item>
+                <ion-item class="item-icon-left item-icon-right item-divider dark" id="cargarDocumentos-list-item33" ng-click="getListaDocumentos(30)">
+                    <i class="icon ion-android-document"></i>Derecha
+                    <i class="icon ion-ios-arrow-down icon-accessory"></i>
+                </ion-item>
+                <ion-item class="item-icon-left item-icon-right dark" ng-repeat="documentos in listaDocumentos" ng-show="documentos.idDocumento==30" ng-click="mostrarDocumento(documentos.idDocumento,documentos.valor,documentos.vin,documentos.consecutivo)">
+                    {{documentos.valor}}
+                </ion-item>
+                <ion-item ng-show="mostrarBoton==30">
+                    <button style="font-weight:300;" class="button button-positive " ng-click="modal.show()">
+                        <i class="icon ion-android-upload"></i>
+                    </button>
+                </ion-item>
+                <ion-item class="item-icon-left item-icon-right item-divider dark" id="cargarDocumentos-list-item34" ng-click="getListaDocumentos(29)">
+                    <i class="icon ion-android-document"></i>Izquierda
+                    <i class="icon ion-ios-arrow-down icon-accessory"></i>
+                </ion-item>
+                <ion-item class="item-icon-left item-icon-right dark" ng-repeat="documentos in listaDocumentos" ng-show="documentos.idDocumento==29" ng-click="mostrarDocumento(documentos.idDocumento,documentos.valor,documentos.vin,documentos.consecutivo)">
+                    {{documentos.valor}}
+                </ion-item>
+                <ion-item ng-show="mostrarBoton==29">
+                    <button style="font-weight:300;" class="button button-positive " ng-click="modal.show()">
+                        <i class="icon ion-android-upload"></i>
+                    </button>
+                </ion-item>
+                <ion-item class="item-icon-left item-icon-right item-divider dark" id="cargarDocumentos-list-item35" ng-click="getListaDocumentos(28)">
+                    <i class="icon ion-android-document"></i>Trasera
+                    <i class="icon ion-ios-arrow-down icon-accessory"></i>
+                </ion-item>
+                <ion-item class="item-icon-left item-icon-right dark" ng-repeat="documentos in listaDocumentos" ng-show="documentos.idDocumento==28" ng-click="mostrarDocumento(documentos.idDocumento,documentos.valor,documentos.vin,documentos.consecutivo)">
+                    {{documentos.valor}}
+                </ion-item>
+                <ion-item ng-show="mostrarBoton==28">
+                    <button style="font-weight:300;" class="button button-positive " ng-click="modal.show()">
+                        <i class="icon ion-android-upload"></i>
+                    </button>
+                </ion-item>
+            </ion-list>
+        </div>
+        <button id="cargarDocumentos-button9" style="font-weight:300;" class="button button-positive  button-block" ng-click="mostrarFotos()">Mostrar Fotos</button>
+        <ion-item ng-repeat="fotos in probandoFotos">
+            <img ng-src="{{fotos.imagen}}" id="srcImage" />
+            <p>{{fotos.nomFoto}}</p>
+        </ion-item>
+        <button id="cargarDocumentos-button9" style="font-weight:300;" class="button button-positive  button-block" ng-click="sincronizar()">Sincronizar</button>
+    </ion-content>
+</ion-view>
+<!--Modal para la carga de archivos -->
+<script id="my-modal.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar>
+            <h1 class="title" style="color:#392972;text-align:center;">Cargar Foto</h1>
+            <button class="button button-light " ng-click="modal.hide()"><i class="icon ion-android-close"></i></button>
+        </ion-header-bar>
+        <ion-content style="text-align:center;">
+            <ion-item>
+                <input type="text" placeholder="Nombre de foto" ng-model="nombreArchivo.nombre">
+                <img ng-show="mostrarImagen==1" ng-src="{{srcImage}}">
+                <p ng-show="mostrarImagen==0"> </p>
+                <br/>
+                <button class="button button-positive " ng-click="tomaImagen() "><i class="icon ion-android-camera"></i></button>
+                <button class="button button-positive " ng-click="guardarURL(srcImage,nombreArchivo.nombre,mostrarBoton) "><i class="icon ion-android-send"></i></button>
+                <br/>
+            </ion-item>
+        </ion-content>
+    </ion-modal-view>
+</script>
+<!--Modal para mostrar archivos-->
+<script id="mostrarArchivos.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar>
+            <h1 class="title" style="color:#392972;text-align:center;">Documento</h1>
+            <button class="button button-light " ng-click="miModal.hide()"><i class="icon ion-android-close"></i></button>
+        </ion-header-bar>
+        <ion-content style="text-align:center;">
+            <ion-item>
+                <!--                <object id="ifDocument" data="rutaImagenMostrar" width="100%" height="100%"></object>-->
+                <img src="{{ruta}}" alt="">
+            </ion-item>
+        </ion-content>
+    </ion-modal-view>
+</script>

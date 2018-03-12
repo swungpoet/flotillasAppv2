@@ -1,0 +1,32 @@
+<ion-view title="Búsqueda" hide-nav-bar="true" id="page1">
+    <ion-content padding="true" class="manual-ios-statusbar-padding">
+        <div class="spacer" style="width: 300px; height: 10px;"></div>
+        <h3 id="bSqueda-heading2" style="color:#392972;text-align:center;">Búsqueda de Unidad</h3>
+        <div class="spacer" style="width: 300px; height: 10px;"></div>
+        <form id="bSqueda-form3" class="list">
+            <label class="item item-input item-stacked-label" id="bSqueda-input4">
+                <span class="input-label">Factura</span>
+                <input type="text" placeholder="" ng-model="datosUnidad.factura">
+            </label>
+            <label class="item item-input item-stacked-label" id="bSqueda-input5">
+                <span class="input-label">Vin</span>
+                <input type="text" placeholder="" ng-model="datosUnidad.vin">
+            </label>
+            <label class="item item-input item-stacked-label" id="bSqueda-input6">
+                <span class="input-label">Placa</span>
+                <input type="text" placeholder="" ng-model="datosUnidad.placa">
+            </label>
+        </form>
+        <button id="bSqueda-button3" style="font-weight:300;" class="button button-positive  button-block" ng-click="buscaUnidad()">Buscar</button>
+        <div class="spacer" style="width: 300px; height: 10px;"></div>
+        <div id="bSqueda-button-bar1" class="button-bar"></div>
+        <ion-list id="bSqueda-list8" ng-repeat="unidad in infoUnidad">
+            <ion-item class="item-icon-left dark" id="bSqueda-list-item23" ng-click="irCargarDocumentos(unidad)">
+                <i class="icon No Icon"></i>{{unidad.vin}}
+                <span class="item-note">          
+                    
+                </span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
